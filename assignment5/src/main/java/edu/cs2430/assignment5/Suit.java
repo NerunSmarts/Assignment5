@@ -4,5 +4,17 @@ public enum Suit {
     CLUBS,
     DIAMONDS,
     HEARTS,
-    SPADES,
+    SPADES;
+    
+   @Override public String toString() {
+        return switch (this) {
+            case CLUBS -> "clubs";
+            case DIAMONDS -> "diamonds";
+            case HEARTS -> "hearts";
+            case SPADES -> "spades";
+            default -> "you broke it dumbass";
+        };
+    }
 }
+
+
