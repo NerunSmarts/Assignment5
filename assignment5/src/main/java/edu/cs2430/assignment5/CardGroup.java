@@ -85,5 +85,17 @@ public class CardGroup {
         }
     }
 
+    @Override public String toString() {
+        String output = "";
+        for (Card card : cardList) {
+            if (cardList.indexOf(card) == cardList.size() - 1) {
+                output += card.toString();
+            } else {
+                output += card.toString() + "\n";
+            }
+        }
+        return output;
+    }
+
 
 }
