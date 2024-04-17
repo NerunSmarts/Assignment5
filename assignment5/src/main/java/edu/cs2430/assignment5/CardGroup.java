@@ -67,7 +67,7 @@ public class CardGroup {
 
     public void shuffle(Random random) {
         int n = cardList.size();
-        for (int i = 0; i < n - 1; i--) {
+        for (int i = 0; i < n - 1; i++) {
             int j = random.nextInt(i + 1);
             Card temp = cardList.get(i);
             cardList.set(i, cardList.get(j));
