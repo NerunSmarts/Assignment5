@@ -65,13 +65,17 @@ public class CardGroup {
         return cardList.remove(cardList.size() - 1);
     }
 
-    public void shuffle(Random random) {
-        int n = cardList.size();
-        for (int i = 0; i < n - 1; i++) {
-            int j = random.nextInt(i + 1);
-            Card temp = cardList.get(i);
-            cardList.set(i, cardList.get(j));
-            cardList.set(j, temp);
+    public void shuffle (Random random) {
+
+for (int i = 0; i < this.cardList.size(); i++) {
+
+int swapIndex = random.nextInt(cardList.size());
+
+Card temp = this.cardList.get(1);
+
+this.cardList.set(1, this.cardList.get(swapIndex));
+
+this.cardList.set(swapIndex, temp);
         }
     }
 
