@@ -67,15 +67,11 @@ public class CardGroup {
 
     public void shuffle (Random random) {
 
-for (int i = 0; i < this.cardList.size(); i++) {
-
-int swapIndex = random.nextInt(cardList.size());
-
-Card temp = this.cardList.get(1);
-
-this.cardList.set(1, this.cardList.get(swapIndex));
-
-this.cardList.set(swapIndex, temp);
+        for (int i = 0; i < this.cardList.size(); i++) {
+            int j = random.nextInt(cardList.size());
+            Card temp = this.cardList.get(i);
+            this.cardList.set(i, this.cardList.get(j));
+            this.cardList.set(j, temp);
         }
     }
 
